@@ -334,3 +334,36 @@ body {
     font-size: 0.8rem;
     opacity: 0.7;
 }
+/* ===== NEW ADDITIONS ONLY ===== */
+/* Price notice at top */
+.dark-coin-notice {
+    text-align: center;
+    margin: 1rem auto;
+    padding: 0.7rem;
+    width: 80%;
+    background: rgba(26, 10, 0, 0.5);
+    border: 1px solid #5a3a2a;
+    border-left: 5px solid #8a0303;
+    color: #c9a66b;
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+/* Book selection dropdown */
+select {
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(10, 0, 0, 0.7);
+    border: 1px solid #3a2a1a;
+    color: #e0d4b3;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #c9a66b;
+    box-shadow: 0 0 10px rgba(201, 166, 107, 0.3);
+}
