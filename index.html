@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter Library</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('door.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      font-family: sans-serif;
+    }
+
+    #door-knob {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+      animation: glow 1s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+
+    #door-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    #door-button:focus {
+      outline: none;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.6);
+      }
+      to {
+        box-shadow: 0 0 20px 8px rgba(255, 215, 0, 1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="door-knob"></div>
+  <button id="door-button" aria-label="Enter Library" onclick="enterLibrary()"></button>
+
+  <script>
+    function enterLibrary() {
+      window.location.href = 'library.html';
+    }
+  </script>
+</body>
+</html>
