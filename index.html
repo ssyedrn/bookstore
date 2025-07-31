@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Enter Library</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('door.jpg') no-repeat center center;
+      background-size: contain; /* Use 'cover' if you want full bleed */
+      position: relative;
+    }
+
+    #door-knob {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      min-width: 30px;
+      min-height: 30px;
+      max-width: 200px;
+      max-height: 200px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
+      animation: glow 1s ease-in-out infinite alternate;
+      z-index: 1;
+    }
+
+    #door-button {
+      position: absolute;
+      width: 5vw;
+      height: 5vw;
+      min-width: 30px;
+      min-height: 30px;
+      max-width: 200px;
+      max-height: 200px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.6);
+      }
+      to {
+        box-shadow: 0 0 20px 8px rgba(255, 215, 0, 1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="door-knob" style="top: 48%; left: 52%; transform: translate(-50%, -50%);"></div>
+  <button id="door-button" style="top: 48%; left: 52%; transform: translate(-50%, -50%);" onclick="enterLibrary()" aria-label="Enter Library"></button>
+
+  <script>
+    function enterLibrary() {
+      window.location.href = 'library.html';
+    }
+  </script>
+</body>
+</html>
